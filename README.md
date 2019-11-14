@@ -9,7 +9,7 @@ Comments on archive content
 - /font/* - fonts in different formats
 
 - /css/*  - different kinds of css, for all situations. Should be ok with 
-  twitter bootstrap. Also, you can skip <i> style and assign icon classes
+  twitter bootstrap. Also, you can skip `<i>` style and assign icon classes
   directly to text elements, if you don't mind about IE7.
 
 - demo.html - demo file, to show your webfont content
