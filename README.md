@@ -2,6 +2,10 @@
 This is an icon font of the [Feather Icons](https://feathericons.com) ([Github](https://github.com/feathericons/feather)) by Cole Bemis
 and repackaged using [Fontello](http://fontello.com/)
 
+Demo
+----
+See all the icons under [demo.html](https://okj579.github.io/feather-font/demo.html)
+
 
 Comments on archive content
 ---------------------------
