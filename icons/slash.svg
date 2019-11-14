@@ -1,14 +1,1 @@
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <circle cx="12" cy="12" r="10" />
-  <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 23C5.9 23 1 18.1 1 12c0-3 1.2-5.7 3.2-7.7l.1-.1.1-.1C6.3 2.2 9 1 12 1c6.1 0 11 4.9 11 11 0 3-1.2 5.7-3.2 7.7l-.1.1-.1.1C17.7 21.8 15 23 12 23zM5 6.4C3.7 7.9 3 9.9 3 12c0 5 4 9 9 9 2.1 0 4.1-.7 5.6-2L5 6.4zM6.4 5L19 17.6c1.2-1.5 2-3.5 2-5.6 0-5-4-9-9-9-2.1 0-4.1.7-5.6 2z"/></svg>

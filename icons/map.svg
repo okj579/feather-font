@@ -1,15 +1,1 @@
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6" />
-  <line x1="8" y1="2" x2="8" y2="18" />
-  <line x1="16" y1="6" x2="16" y2="22" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 23c-.2 0-.3 0-.5-.1L8 19.1l-6.5 3.7c-.3.2-.7.2-1 0-.3-.1-.5-.4-.5-.8V6c0-.4.2-.7.5-.9l7-4c.3-.2.7-.2 1 0L16 4.9l6.5-3.7c.3-.2.7-.2 1 0 .3.1.5.4.5.8v16c0 .4-.2.7-.5.9l-7 4c-.1 0-.3.1-.5.1zm-7-5.6l6 3V6.6l-6-3v13.8zm8-10.8v13.7l5-2.9V3.7l-5 2.9zm-15 0v13.7l5-2.9V3.7L2 6.6z"/></svg>
