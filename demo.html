@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html>
+  <head><!--[if lt IE 9]><script language="javascript" type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <meta charset="UTF-8"><style>/*
+ * Bootstrap v2.2.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+button,
+input {
+  *overflow: visible;
+  line-height: normal;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  background-color: #fff;
+}
+a {
+  color: #08c;
+  text-decoration: none;
+}
+a:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+.row {
+  margin-left: -20px;
+  *zoom: 1;
+}
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.row:after {
+  clear: both;
+}
+[class*="span"] {
+  float: left;
+  min-height: 1px;
+  margin-left: 20px;
+}
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 940px;
+}
+.span12 {
+  width: 940px;
+}
+.span11 {
+  width: 860px;
+}
+.span10 {
+  width: 780px;
+}
+.span9 {
+  width: 700px;
+}
+.span8 {
+  width: 620px;
+}
+.span7 {
+  width: 540px;
+}
+.span6 {
+  width: 460px;
+}
+.span5 {
+  width: 380px;
+}
+.span4 {
+  width: 300px;
+}
+.span3 {
+  width: 220px;
+}
+.span2 {
+  width: 140px;
+}
+.span1 {
+  width: 60px;
+}
+[class*="span"].pull-right,
+.row-fluid [class*="span"].pull-right {
+  float: right;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  *zoom: 1;
+}
+.container:before,
+.container:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.container:after {
+  clear: both;
+}
+p {
+  margin: 0 0 10px;
+}
+.lead {
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 30px;
+}
+small {
+  font-size: 85%;
+}
+h1 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+h1 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999;
+}
+h1 {
+  line-height: 40px;
+}
+h1 {
+  font-size: 38.5px;
+}
+h1 small {
+  font-size: 24.5px;
+}
+body {
+  margin-top: 90px;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  margin-left: -480px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding-top: 10px;
+  z-index: 10;
+}
+.footer {
+  color: #ddd;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+.footer a {
+  color: #ccc;
+  text-decoration: underline;
+}
+.the-icons {
+  font-size: 14px;
+  line-height: 24px;
+}
+.switch {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  color: #666;
+}
+.switch input {
+  margin-right: 0.3em;
+}
+.codesOn .i-name {
+  display: none;
+}
+.codesOn .i-code {
+  display: inline;
+}
+.i-code {
+  display: none;
+}
+@font-face {
+      font-family: 'feather';
+      src: url('./font/feather.eot?52352131');
+      src: url('./font/feather.eot?52352131#iefix') format('embedded-opentype'),
+           url('./font/feather.woff?52352131') format('woff'),
+           url('./font/feather.ttf?52352131') format('truetype'),
+           url('./font/feather.svg?52352131#feather') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+     
+     
+    .demo-icon
+    {
+      font-family: "feather";
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+     
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      /* opacity: .8; */
+     
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+     
+      /* fix buttons height, for twitter bootstrap */
+      line-height: 1em;
+     
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed */
+      margin-left: .2em;
+     
+      /* You can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+     
+      /* Font smoothing. That was taken from TWBS */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+     
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    }
+     </style>
+    <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/" + font.fontname + "-ie7.css"><![endif]-->
+    <script>
+      function toggleCodes(on) {
+        var obj = document.getElementById('icons');
+      
+        if (on) {
+          obj.className += ' codesOn';
+        } else {
+          obj.className = obj.className.replace(' codesOn', '');
+        }
+      }
+      
+    </script>
+  </head>
+  <body>
+    <div class="container header">
+      <h1>feather <small>font demo</small></h1>
+      <label class="switch">
+        <input type="checkbox" onclick="toggleCodes(this.checked)">show codes
+      </label>
+    </div>
+    <div class="container" id="icons">
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe800"><i class="demo-icon feather-arrow-left-circle">&#xe800;</i> <span class="i-name">feather-arrow-left-circle</span><span class="i-code">0xe800</span></div>
+        <div class="the-icons span3" title="Code: 0xe801"><i class="demo-icon feather-arrow-right">&#xe801;</i> <span class="i-name">feather-arrow-right</span><span class="i-code">0xe801</span></div>
+        <div class="the-icons span3" title="Code: 0xe802"><i class="demo-icon feather-arrow-up">&#xe802;</i> <span class="i-name">feather-arrow-up</span><span class="i-code">0xe802</span></div>
+        <div class="the-icons span3" title="Code: 0xe803"><i class="demo-icon feather-arrow-up-right">&#xe803;</i> <span class="i-name">feather-arrow-up-right</span><span class="i-code">0xe803</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe804"><i class="demo-icon feather-arrow-up-left">&#xe804;</i> <span class="i-name">feather-arrow-up-left</span><span class="i-code">0xe804</span></div>
+        <div class="the-icons span3" title="Code: 0xe805"><i class="demo-icon feather-arrow-right-circle">&#xe805;</i> <span class="i-name">feather-arrow-right-circle</span><span class="i-code">0xe805</span></div>
+        <div class="the-icons span3" title="Code: 0xe806"><i class="demo-icon feather-arrow-up-circle">&#xe806;</i> <span class="i-name">feather-arrow-up-circle</span><span class="i-code">0xe806</span></div>
+        <div class="the-icons span3" title="Code: 0xe807"><i class="demo-icon feather-at-sign">&#xe807;</i> <span class="i-name">feather-at-sign</span><span class="i-code">0xe807</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe808"><i class="demo-icon feather-bar-chart">&#xe808;</i> <span class="i-name">feather-bar-chart</span><span class="i-code">0xe808</span></div>
+        <div class="the-icons span3" title="Code: 0xe809"><i class="demo-icon feather-award">&#xe809;</i> <span class="i-name">feather-award</span><span class="i-code">0xe809</span></div>
+        <div class="the-icons span3" title="Code: 0xe80a"><i class="demo-icon feather-bell">&#xe80a;</i> <span class="i-name">feather-bell</span><span class="i-code">0xe80a</span></div>
+        <div class="the-icons span3" title="Code: 0xe80b"><i class="demo-icon feather-bar-chart-2">&#xe80b;</i> <span class="i-name">feather-bar-chart-2</span><span class="i-code">0xe80b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe80c"><i class="demo-icon feather-bell-off">&#xe80c;</i> <span class="i-name">feather-bell-off</span><span class="i-code">0xe80c</span></div>
+        <div class="the-icons span3" title="Code: 0xe80d"><i class="demo-icon feather-battery">&#xe80d;</i> <span class="i-name">feather-battery</span><span class="i-code">0xe80d</span></div>
+        <div class="the-icons span3" title="Code: 0xe80e"><i class="demo-icon feather-battery-charging">&#xe80e;</i> <span class="i-name">feather-battery-charging</span><span class="i-code">0xe80e</span></div>
+        <div class="the-icons span3" title="Code: 0xe80f"><i class="demo-icon feather-book">&#xe80f;</i> <span class="i-name">feather-book</span><span class="i-code">0xe80f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe810"><i class="demo-icon feather-bold">&#xe810;</i> <span class="i-name">feather-bold</span><span class="i-code">0xe810</span></div>
+        <div class="the-icons span3" title="Code: 0xe811"><i class="demo-icon feather-bookmark">&#xe811;</i> <span class="i-name">feather-bookmark</span><span class="i-code">0xe811</span></div>
+        <div class="the-icons span3" title="Code: 0xe812"><i class="demo-icon feather-book-open">&#xe812;</i> <span class="i-name">feather-book-open</span><span class="i-code">0xe812</span></div>
+        <div class="the-icons span3" title="Code: 0xe813"><i class="demo-icon feather-bluetooth">&#xe813;</i> <span class="i-name">feather-bluetooth</span><span class="i-code">0xe813</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe814"><i class="demo-icon feather-box">&#xe814;</i> <span class="i-name">feather-box</span><span class="i-code">0xe814</span></div>
+        <div class="the-icons span3" title="Code: 0xe815"><i class="demo-icon feather-briefcase">&#xe815;</i> <span class="i-name">feather-briefcase</span><span class="i-code">0xe815</span></div>
+        <div class="the-icons span3" title="Code: 0xe816"><i class="demo-icon feather-calendar">&#xe816;</i> <span class="i-name">feather-calendar</span><span class="i-code">0xe816</span></div>
+        <div class="the-icons span3" title="Code: 0xe817"><i class="demo-icon feather-cast">&#xe817;</i> <span class="i-name">feather-cast</span><span class="i-code">0xe817</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe818"><i class="demo-icon feather-camera">&#xe818;</i> <span class="i-name">feather-camera</span><span class="i-code">0xe818</span></div>
+        <div class="the-icons span3" title="Code: 0xe819"><i class="demo-icon feather-camera-off">&#xe819;</i> <span class="i-name">feather-camera-off</span><span class="i-code">0xe819</span></div>
+        <div class="the-icons span3" title="Code: 0xe81a"><i class="demo-icon feather-check">&#xe81a;</i> <span class="i-name">feather-check</span><span class="i-code">0xe81a</span></div>
+        <div class="the-icons span3" title="Code: 0xe81b"><i class="demo-icon feather-check-circle">&#xe81b;</i> <span class="i-name">feather-check-circle</span><span class="i-code">0xe81b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe81c"><i class="demo-icon feather-check-square">&#xe81c;</i> <span class="i-name">feather-check-square</span><span class="i-code">0xe81c</span></div>
+        <div class="the-icons span3" title="Code: 0xe81d"><i class="demo-icon feather-chevron-down">&#xe81d;</i> <span class="i-name">feather-chevron-down</span><span class="i-code">0xe81d</span></div>
+        <div class="the-icons span3" title="Code: 0xe81e"><i class="demo-icon feather-chevron-right">&#xe81e;</i> <span class="i-name">feather-chevron-right</span><span class="i-code">0xe81e</span></div>
+        <div class="the-icons span3" title="Code: 0xe81f"><i class="demo-icon feather-chevron-left">&#xe81f;</i> <span class="i-name">feather-chevron-left</span><span class="i-code">0xe81f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe820"><i class="demo-icon feather-chevrons-down">&#xe820;</i> <span class="i-name">feather-chevrons-down</span><span class="i-code">0xe820</span></div>
+        <div class="the-icons span3" title="Code: 0xe821"><i class="demo-icon feather-chevrons-left">&#xe821;</i> <span class="i-name">feather-chevrons-left</span><span class="i-code">0xe821</span></div>
+        <div class="the-icons span3" title="Code: 0xe822"><i class="demo-icon feather-chevrons-right">&#xe822;</i> <span class="i-name">feather-chevrons-right</span><span class="i-code">0xe822</span></div>
+        <div class="the-icons span3" title="Code: 0xe823"><i class="demo-icon feather-chevrons-up">&#xe823;</i> <span class="i-name">feather-chevrons-up</span><span class="i-code">0xe823</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe824"><i class="demo-icon feather-chrome">&#xe824;</i> <span class="i-name">feather-chrome</span><span class="i-code">0xe824</span></div>
+        <div class="the-icons span3" title="Code: 0xe825"><i class="demo-icon feather-chevron-up">&#xe825;</i> <span class="i-name">feather-chevron-up</span><span class="i-code">0xe825</span></div>
+        <div class="the-icons span3" title="Code: 0xe826"><i class="demo-icon feather-circle">&#xe826;</i> <span class="i-name">feather-circle</span><span class="i-code">0xe826</span></div>
+        <div class="the-icons span3" title="Code: 0xe827"><i class="demo-icon feather-clock">&#xe827;</i> <span class="i-name">feather-clock</span><span class="i-code">0xe827</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe828"><i class="demo-icon feather-cloud">&#xe828;</i> <span class="i-name">feather-cloud</span><span class="i-code">0xe828</span></div>
+        <div class="the-icons span3" title="Code: 0xe829"><i class="demo-icon feather-clipboard">&#xe829;</i> <span class="i-name">feather-clipboard</span><span class="i-code">0xe829</span></div>
+        <div class="the-icons span3" title="Code: 0xe82b"><i class="demo-icon feather-cloud-lightning">&#xe82b;</i> <span class="i-name">feather-cloud-lightning</span><span class="i-code">0xe82b</span></div>
+        <div class="the-icons span3" title="Code: 0xe82c"><i class="demo-icon feather-cloud-off">&#xe82c;</i> <span class="i-name">feather-cloud-off</span><span class="i-code">0xe82c</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe82e"><i class="demo-icon feather-code">&#xe82e;</i> <span class="i-name">feather-code</span><span class="i-code">0xe82e</span></div>
+        <div class="the-icons span3" title="Code: 0xe830"><i class="demo-icon feather-codesandbox">&#xe830;</i> <span class="i-name">feather-codesandbox</span><span class="i-code">0xe830</span></div>
+        <div class="the-icons span3" title="Code: 0xe831"><i class="demo-icon feather-coffee">&#xe831;</i> <span class="i-name">feather-coffee</span><span class="i-code">0xe831</span></div>
+        <div class="the-icons span3" title="Code: 0xe832"><i class="demo-icon feather-codepen">&#xe832;</i> <span class="i-name">feather-codepen</span><span class="i-code">0xe832</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe833"><i class="demo-icon feather-columns">&#xe833;</i> <span class="i-name">feather-columns</span><span class="i-code">0xe833</span></div>
+        <div class="the-icons span3" title="Code: 0xe834"><i class="demo-icon feather-command">&#xe834;</i> <span class="i-name">feather-command</span><span class="i-code">0xe834</span></div>
+        <div class="the-icons span3" title="Code: 0xe835"><i class="demo-icon feather-corner-down-right">&#xe835;</i> <span class="i-name">feather-corner-down-right</span><span class="i-code">0xe835</span></div>
+        <div class="the-icons span3" title="Code: 0xe836"><i class="demo-icon feather-compass">&#xe836;</i> <span class="i-name">feather-compass</span><span class="i-code">0xe836</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe837"><i class="demo-icon feather-corner-down-left">&#xe837;</i> <span class="i-name">feather-corner-down-left</span><span class="i-code">0xe837</span></div>
+        <div class="the-icons span3" title="Code: 0xe838"><i class="demo-icon feather-corner-left-up">&#xe838;</i> <span class="i-name">feather-corner-left-up</span><span class="i-code">0xe838</span></div>
+        <div class="the-icons span3" title="Code: 0xe839"><i class="demo-icon feather-corner-left-down">&#xe839;</i> <span class="i-name">feather-corner-left-down</span><span class="i-code">0xe839</span></div>
+        <div class="the-icons span3" title="Code: 0xe83a"><i class="demo-icon feather-corner-right-down">&#xe83a;</i> <span class="i-name">feather-corner-right-down</span><span class="i-code">0xe83a</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe83b"><i class="demo-icon feather-copy">&#xe83b;</i> <span class="i-name">feather-copy</span><span class="i-code">0xe83b</span></div>
+        <div class="the-icons span3" title="Code: 0xe83c"><i class="demo-icon feather-corner-right-up">&#xe83c;</i> <span class="i-name">feather-corner-right-up</span><span class="i-code">0xe83c</span></div>
+        <div class="the-icons span3" title="Code: 0xe83d"><i class="demo-icon feather-corner-up-left">&#xe83d;</i> <span class="i-name">feather-corner-up-left</span><span class="i-code">0xe83d</span></div>
+        <div class="the-icons span3" title="Code: 0xe83e"><i class="demo-icon feather-corner-up-right">&#xe83e;</i> <span class="i-name">feather-corner-up-right</span><span class="i-code">0xe83e</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe83f"><i class="demo-icon feather-crop">&#xe83f;</i> <span class="i-name">feather-crop</span><span class="i-code">0xe83f</span></div>
+        <div class="the-icons span3" title="Code: 0xe840"><i class="demo-icon feather-delete">&#xe840;</i> <span class="i-name">feather-delete</span><span class="i-code">0xe840</span></div>
+        <div class="the-icons span3" title="Code: 0xe841"><i class="demo-icon feather-crosshair">&#xe841;</i> <span class="i-name">feather-crosshair</span><span class="i-code">0xe841</span></div>
+        <div class="the-icons span3" title="Code: 0xe842"><i class="demo-icon feather-credit-card">&#xe842;</i> <span class="i-name">feather-credit-card</span><span class="i-code">0xe842</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe843"><i class="demo-icon feather-database">&#xe843;</i> <span class="i-name">feather-database</span><span class="i-code">0xe843</span></div>
+        <div class="the-icons span3" title="Code: 0xe844"><i class="demo-icon feather-dollar-sign">&#xe844;</i> <span class="i-name">feather-dollar-sign</span><span class="i-code">0xe844</span></div>
+        <div class="the-icons span3" title="Code: 0xe845"><i class="demo-icon feather-disc">&#xe845;</i> <span class="i-name">feather-disc</span><span class="i-code">0xe845</span></div>
+        <div class="the-icons span3" title="Code: 0xe846"><i class="demo-icon feather-download-cloud">&#xe846;</i> <span class="i-name">feather-download-cloud</span><span class="i-code">0xe846</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe847"><i class="demo-icon feather-download">&#xe847;</i> <span class="i-name">feather-download</span><span class="i-code">0xe847</span></div>
+        <div class="the-icons span3" title="Code: 0xe848"><i class="demo-icon feather-droplet">&#xe848;</i> <span class="i-name">feather-droplet</span><span class="i-code">0xe848</span></div>
+        <div class="the-icons span3" title="Code: 0xe849"><i class="demo-icon feather-cpu">&#xe849;</i> <span class="i-name">feather-cpu</span><span class="i-code">0xe849</span></div>
+        <div class="the-icons span3" title="Code: 0xe84a"><i class="demo-icon feather-edit">&#xe84a;</i> <span class="i-name">feather-edit</span><span class="i-code">0xe84a</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe84b"><i class="demo-icon feather-edit-2">&#xe84b;</i> <span class="i-name">feather-edit-2</span><span class="i-code">0xe84b</span></div>
+        <div class="the-icons span3" title="Code: 0xe84c"><i class="demo-icon feather-edit-3">&#xe84c;</i> <span class="i-name">feather-edit-3</span><span class="i-code">0xe84c</span></div>
+        <div class="the-icons span3" title="Code: 0xe84d"><i class="demo-icon feather-external-link">&#xe84d;</i> <span class="i-name">feather-external-link</span><span class="i-code">0xe84d</span></div>
+        <div class="the-icons span3" title="Code: 0xe84e"><i class="demo-icon feather-facebook">&#xe84e;</i> <span class="i-name">feather-facebook</span><span class="i-code">0xe84e</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe84f"><i class="demo-icon feather-eye-off">&#xe84f;</i> <span class="i-name">feather-eye-off</span><span class="i-code">0xe84f</span></div>
+        <div class="the-icons span3" title="Code: 0xe850"><i class="demo-icon feather-eye">&#xe850;</i> <span class="i-name">feather-eye</span><span class="i-code">0xe850</span></div>
+        <div class="the-icons span3" title="Code: 0xe851"><i class="demo-icon feather-fast-forward">&#xe851;</i> <span class="i-name">feather-fast-forward</span><span class="i-code">0xe851</span></div>
+        <div class="the-icons span3" title="Code: 0xe852"><i class="demo-icon feather-feather">&#xe852;</i> <span class="i-name">feather-feather</span><span class="i-code">0xe852</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe853"><i class="demo-icon feather-figma">&#xe853;</i> <span class="i-name">feather-figma</span><span class="i-code">0xe853</span></div>
+        <div class="the-icons span3" title="Code: 0xe854"><i class="demo-icon feather-file">&#xe854;</i> <span class="i-name">feather-file</span><span class="i-code">0xe854</span></div>
+        <div class="the-icons span3" title="Code: 0xe855"><i class="demo-icon feather-file-minus">&#xe855;</i> <span class="i-name">feather-file-minus</span><span class="i-code">0xe855</span></div>
+        <div class="the-icons span3" title="Code: 0xe856"><i class="demo-icon feather-film">&#xe856;</i> <span class="i-name">feather-film</span><span class="i-code">0xe856</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe857"><i class="demo-icon feather-file-plus">&#xe857;</i> <span class="i-name">feather-file-plus</span><span class="i-code">0xe857</span></div>
+        <div class="the-icons span3" title="Code: 0xe858"><i class="demo-icon feather-file-text">&#xe858;</i> <span class="i-name">feather-file-text</span><span class="i-code">0xe858</span></div>
+        <div class="the-icons span3" title="Code: 0xe859"><i class="demo-icon feather-folder">&#xe859;</i> <span class="i-name">feather-folder</span><span class="i-code">0xe859</span></div>
+        <div class="the-icons span3" title="Code: 0xe85a"><i class="demo-icon feather-filter">&#xe85a;</i> <span class="i-name">feather-filter</span><span class="i-code">0xe85a</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe85b"><i class="demo-icon feather-flag">&#xe85b;</i> <span class="i-name">feather-flag</span><span class="i-code">0xe85b</span></div>
+        <div class="the-icons span3" title="Code: 0xe85c"><i class="demo-icon feather-folder-plus">&#xe85c;</i> <span class="i-name">feather-folder-plus</span><span class="i-code">0xe85c</span></div>
+        <div class="the-icons span3" title="Code: 0xe85d"><i class="demo-icon feather-folder-minus">&#xe85d;</i> <span class="i-name">feather-folder-minus</span><span class="i-code">0xe85d</span></div>
+        <div class="the-icons span3" title="Code: 0xe85e"><i class="demo-icon feather-gift">&#xe85e;</i> <span class="i-name">feather-gift</span><span class="i-code">0xe85e</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe85f"><i class="demo-icon feather-framer">&#xe85f;</i> <span class="i-name">feather-framer</span><span class="i-code">0xe85f</span></div>
+        <div class="the-icons span3" title="Code: 0xe860"><i class="demo-icon feather-frown">&#xe860;</i> <span class="i-name">feather-frown</span><span class="i-code">0xe860</span></div>
+        <div class="the-icons span3" title="Code: 0xe861"><i class="demo-icon feather-git-branch">&#xe861;</i> <span class="i-name">feather-git-branch</span><span class="i-code">0xe861</span></div>
+        <div class="the-icons span3" title="Code: 0xe862"><i class="demo-icon feather-git-commit">&#xe862;</i> <span class="i-name">feather-git-commit</span><span class="i-code">0xe862</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe863"><i class="demo-icon feather-github">&#xe863;</i> <span class="i-name">feather-github</span><span class="i-code">0xe863</span></div>
+        <div class="the-icons span3" title="Code: 0xe864"><i class="demo-icon feather-gitlab">&#xe864;</i> <span class="i-name">feather-gitlab</span><span class="i-code">0xe864</span></div>
+        <div class="the-icons span3" title="Code: 0xe865"><i class="demo-icon feather-git-merge">&#xe865;</i> <span class="i-name">feather-git-merge</span><span class="i-code">0xe865</span></div>
+        <div class="the-icons span3" title="Code: 0xe866"><i class="demo-icon feather-git-pull-request">&#xe866;</i> <span class="i-name">feather-git-pull-request</span><span class="i-code">0xe866</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe867"><i class="demo-icon feather-globe">&#xe867;</i> <span class="i-name">feather-globe</span><span class="i-code">0xe867</span></div>
+        <div class="the-icons span3" title="Code: 0xe868"><i class="demo-icon feather-grid">&#xe868;</i> <span class="i-name">feather-grid</span><span class="i-code">0xe868</span></div>
+        <div class="the-icons span3" title="Code: 0xe869"><i class="demo-icon feather-hard-drive">&#xe869;</i> <span class="i-name">feather-hard-drive</span><span class="i-code">0xe869</span></div>
+        <div class="the-icons span3" title="Code: 0xe86a"><i class="demo-icon feather-hash">&#xe86a;</i> <span class="i-name">feather-hash</span><span class="i-code">0xe86a</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe86b"><i class="demo-icon feather-headphones">&#xe86b;</i> <span class="i-name">feather-headphones</span><span class="i-code">0xe86b</span></div>
+        <div class="the-icons span3" title="Code: 0xe86c"><i class="demo-icon feather-heart">&#xe86c;</i> <span class="i-name">feather-heart</span><span class="i-code">0xe86c</span></div>
+        <div class="the-icons span3" title="Code: 0xe86d"><i class="demo-icon feather-help-circle">&#xe86d;</i> <span class="i-name">feather-help-circle</span><span class="i-code">0xe86d</span></div>
+        <div class="the-icons span3" title="Code: 0xe86e"><i class="demo-icon feather-hexagon">&#xe86e;</i> <span class="i-name">feather-hexagon</span><span class="i-code">0xe86e</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe86f"><i class="demo-icon feather-home">&#xe86f;</i> <span class="i-name">feather-home</span><span class="i-code">0xe86f</span></div>
+        <div class="the-icons span3" title="Code: 0xe870"><i class="demo-icon feather-image">&#xe870;</i> <span class="i-name">feather-image</span><span class="i-code">0xe870</span></div>
+        <div class="the-icons span3" title="Code: 0xe871"><i class="demo-icon feather-inbox">&#xe871;</i> <span class="i-name">feather-inbox</span><span class="i-code">0xe871</span></div>
+        <div class="the-icons span3" title="Code: 0xe872"><i class="demo-icon feather-info">&#xe872;</i> <span class="i-name">feather-info</span><span class="i-code">0xe872</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe873"><i class="demo-icon feather-instagram">&#xe873;</i> <span class="i-name">feather-instagram</span><span class="i-code">0xe873</span></div>
+        <div class="the-icons span3" title="Code: 0xe874"><i class="demo-icon feather-italic">&#xe874;</i> <span class="i-name">feather-italic</span><span class="i-code">0xe874</span></div>
+        <div class="the-icons span3" title="Code: 0xe875"><i class="demo-icon feather-key">&#xe875;</i> <span class="i-name">feather-key</span><span class="i-code">0xe875</span></div>
+        <div class="the-icons span3" title="Code: 0xe876"><i class="demo-icon feather-layers">&#xe876;</i> <span class="i-name">feather-layers</span><span class="i-code">0xe876</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe877"><i class="demo-icon feather-layout">&#xe877;</i> <span class="i-name">feather-layout</span><span class="i-code">0xe877</span></div>
+        <div class="the-icons span3" title="Code: 0xe878"><i class="demo-icon feather-life-buoy">&#xe878;</i> <span class="i-name">feather-life-buoy</span><span class="i-code">0xe878</span></div>
+        <div class="the-icons span3" title="Code: 0xe879"><i class="demo-icon feather-link">&#xe879;</i> <span class="i-name">feather-link</span><span class="i-code">0xe879</span></div>
+        <div class="the-icons span3" title="Code: 0xe87a"><i class="demo-icon feather-link-2">&#xe87a;</i> <span class="i-name">feather-link-2</span><span class="i-code">0xe87a</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe87b"><i class="demo-icon feather-linkedin">&#xe87b;</i> <span class="i-name">feather-linkedin</span><span class="i-code">0xe87b</span></div>
+        <div class="the-icons span3" title="Code: 0xe87c"><i class="demo-icon feather-list">&#xe87c;</i> <span class="i-name">feather-list</span><span class="i-code">0xe87c</span></div>
+        <div class="the-icons span3" title="Code: 0xe87d"><i class="demo-icon feather-loader">&#xe87d;</i> <span class="i-name">feather-loader</span><span class="i-code">0xe87d</span></div>
+        <div class="the-icons span3" title="Code: 0xe87e"><i class="demo-icon feather-lock">&#xe87e;</i> <span class="i-name">feather-lock</span><span class="i-code">0xe87e</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe87f"><i class="demo-icon feather-log-in">&#xe87f;</i> <span class="i-name">feather-log-in</span><span class="i-code">0xe87f</span></div>
+        <div class="the-icons span3" title="Code: 0xe880"><i class="demo-icon feather-log-out">&#xe880;</i> <span class="i-name">feather-log-out</span><span class="i-code">0xe880</span></div>
+        <div class="the-icons span3" title="Code: 0xe881"><i class="demo-icon feather-mail">&#xe881;</i> <span class="i-name">feather-mail</span><span class="i-code">0xe881</span></div>
+        <div class="the-icons span3" title="Code: 0xe882"><i class="demo-icon feather-map">&#xe882;</i> <span class="i-name">feather-map</span><span class="i-code">0xe882</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe883"><i class="demo-icon feather-map-pin">&#xe883;</i> <span class="i-name">feather-map-pin</span><span class="i-code">0xe883</span></div>
+        <div class="the-icons span3" title="Code: 0xe884"><i class="demo-icon feather-maximize">&#xe884;</i> <span class="i-name">feather-maximize</span><span class="i-code">0xe884</span></div>
+        <div class="the-icons span3" title="Code: 0xe885"><i class="demo-icon feather-maximize-2">&#xe885;</i> <span class="i-name">feather-maximize-2</span><span class="i-code">0xe885</span></div>
+        <div class="the-icons span3" title="Code: 0xe886"><i class="demo-icon feather-meh">&#xe886;</i> <span class="i-name">feather-meh</span><span class="i-code">0xe886</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe887"><i class="demo-icon feather-menu">&#xe887;</i> <span class="i-name">feather-menu</span><span class="i-code">0xe887</span></div>
+        <div class="the-icons span3" title="Code: 0xe888"><i class="demo-icon feather-message-circle">&#xe888;</i> <span class="i-name">feather-message-circle</span><span class="i-code">0xe888</span></div>
+        <div class="the-icons span3" title="Code: 0xe889"><i class="demo-icon feather-message-square">&#xe889;</i> <span class="i-name">feather-message-square</span><span class="i-code">0xe889</span></div>
+        <div class="the-icons span3" title="Code: 0xe88a"><i class="demo-icon feather-mic">&#xe88a;</i> <span class="i-name">feather-mic</span><span class="i-code">0xe88a</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe88b"><i class="demo-icon feather-mic-off">&#xe88b;</i> <span class="i-name">feather-mic-off</span><span class="i-code">0xe88b</span></div>
+        <div class="the-icons span3" title="Code: 0xe88c"><i class="demo-icon feather-minimize">&#xe88c;</i> <span class="i-name">feather-minimize</span><span class="i-code">0xe88c</span></div>
+        <div class="the-icons span3" title="Code: 0xe88d"><i class="demo-icon feather-minimize-2">&#xe88d;</i> <span class="i-name">feather-minimize-2</span><span class="i-code">0xe88d</span></div>
+        <div class="the-icons span3" title="Code: 0xe88e"><i class="demo-icon feather-minus">&#xe88e;</i> <span class="i-name">feather-minus</span><span class="i-code">0xe88e</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe88f"><i class="demo-icon feather-minus-circle">&#xe88f;</i> <span class="i-name">feather-minus-circle</span><span class="i-code">0xe88f</span></div>
+        <div class="the-icons span3" title="Code: 0xe890"><i class="demo-icon feather-minus-square">&#xe890;</i> <span class="i-name">feather-minus-square</span><span class="i-code">0xe890</span></div>
+        <div class="the-icons span3" title="Code: 0xe891"><i class="demo-icon feather-monitor">&#xe891;</i> <span class="i-name">feather-monitor</span><span class="i-code">0xe891</span></div>
+        <div class="the-icons span3" title="Code: 0xe892"><i class="demo-icon feather-moon">&#xe892;</i> <span class="i-name">feather-moon</span><span class="i-code">0xe892</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe893"><i class="demo-icon feather-more-horizontal">&#xe893;</i> <span class="i-name">feather-more-horizontal</span><span class="i-code">0xe893</span></div>
+        <div class="the-icons span3" title="Code: 0xe894"><i class="demo-icon feather-more-vertical">&#xe894;</i> <span class="i-name">feather-more-vertical</span><span class="i-code">0xe894</span></div>
+        <div class="the-icons span3" title="Code: 0xe895"><i class="demo-icon feather-mouse-pointer">&#xe895;</i> <span class="i-name">feather-mouse-pointer</span><span class="i-code">0xe895</span></div>
+        <div class="the-icons span3" title="Code: 0xe896"><i class="demo-icon feather-move">&#xe896;</i> <span class="i-name">feather-move</span><span class="i-code">0xe896</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe897"><i class="demo-icon feather-music">&#xe897;</i> <span class="i-name">feather-music</span><span class="i-code">0xe897</span></div>
+        <div class="the-icons span3" title="Code: 0xe898"><i class="demo-icon feather-navigation">&#xe898;</i> <span class="i-name">feather-navigation</span><span class="i-code">0xe898</span></div>
+        <div class="the-icons span3" title="Code: 0xe899"><i class="demo-icon feather-navigation-2">&#xe899;</i> <span class="i-name">feather-navigation-2</span><span class="i-code">0xe899</span></div>
+        <div class="the-icons span3" title="Code: 0xe89a"><i class="demo-icon feather-octagon">&#xe89a;</i> <span class="i-name">feather-octagon</span><span class="i-code">0xe89a</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe89b"><i class="demo-icon feather-package">&#xe89b;</i> <span class="i-name">feather-package</span><span class="i-code">0xe89b</span></div>
+        <div class="the-icons span3" title="Code: 0xe89c"><i class="demo-icon feather-paperclip">&#xe89c;</i> <span class="i-name">feather-paperclip</span><span class="i-code">0xe89c</span></div>
+        <div class="the-icons span3" title="Code: 0xe89d"><i class="demo-icon feather-pause">&#xe89d;</i> <span class="i-name">feather-pause</span><span class="i-code">0xe89d</span></div>
+        <div class="the-icons span3" title="Code: 0xe89e"><i class="demo-icon feather-pause-circle">&#xe89e;</i> <span class="i-name">feather-pause-circle</span><span class="i-code">0xe89e</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe89f"><i class="demo-icon feather-pen-tool">&#xe89f;</i> <span class="i-name">feather-pen-tool</span><span class="i-code">0xe89f</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a0"><i class="demo-icon feather-percent">&#xe8a0;</i> <span class="i-name">feather-percent</span><span class="i-code">0xe8a0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a1"><i class="demo-icon feather-phone">&#xe8a1;</i> <span class="i-name">feather-phone</span><span class="i-code">0xe8a1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a2"><i class="demo-icon feather-phone-call">&#xe8a2;</i> <span class="i-name">feather-phone-call</span><span class="i-code">0xe8a2</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8a3"><i class="demo-icon feather-phone-forwarded">&#xe8a3;</i> <span class="i-name">feather-phone-forwarded</span><span class="i-code">0xe8a3</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a4"><i class="demo-icon feather-phone-incoming">&#xe8a4;</i> <span class="i-name">feather-phone-incoming</span><span class="i-code">0xe8a4</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a5"><i class="demo-icon feather-phone-missed">&#xe8a5;</i> <span class="i-name">feather-phone-missed</span><span class="i-code">0xe8a5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a6"><i class="demo-icon feather-phone-off">&#xe8a6;</i> <span class="i-name">feather-phone-off</span><span class="i-code">0xe8a6</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8a7"><i class="demo-icon feather-phone-outgoing">&#xe8a7;</i> <span class="i-name">feather-phone-outgoing</span><span class="i-code">0xe8a7</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a8"><i class="demo-icon feather-pie-chart">&#xe8a8;</i> <span class="i-name">feather-pie-chart</span><span class="i-code">0xe8a8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a9"><i class="demo-icon feather-play">&#xe8a9;</i> <span class="i-name">feather-play</span><span class="i-code">0xe8a9</span></div>
+        <div class="the-icons span3" title="Code: 0xe8aa"><i class="demo-icon feather-play-circle">&#xe8aa;</i> <span class="i-name">feather-play-circle</span><span class="i-code">0xe8aa</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8ab"><i class="demo-icon feather-plus">&#xe8ab;</i> <span class="i-name">feather-plus</span><span class="i-code">0xe8ab</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ac"><i class="demo-icon feather-plus-circle">&#xe8ac;</i> <span class="i-name">feather-plus-circle</span><span class="i-code">0xe8ac</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ad"><i class="demo-icon feather-plus-square">&#xe8ad;</i> <span class="i-name">feather-plus-square</span><span class="i-code">0xe8ad</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ae"><i class="demo-icon feather-pocket">&#xe8ae;</i> <span class="i-name">feather-pocket</span><span class="i-code">0xe8ae</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8af"><i class="demo-icon feather-power">&#xe8af;</i> <span class="i-name">feather-power</span><span class="i-code">0xe8af</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b0"><i class="demo-icon feather-printer">&#xe8b0;</i> <span class="i-name">feather-printer</span><span class="i-code">0xe8b0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b1"><i class="demo-icon feather-radio">&#xe8b1;</i> <span class="i-name">feather-radio</span><span class="i-code">0xe8b1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b2"><i class="demo-icon feather-refresh-ccw">&#xe8b2;</i> <span class="i-name">feather-refresh-ccw</span><span class="i-code">0xe8b2</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8b3"><i class="demo-icon feather-refresh-cw">&#xe8b3;</i> <span class="i-name">feather-refresh-cw</span><span class="i-code">0xe8b3</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b4"><i class="demo-icon feather-repeat">&#xe8b4;</i> <span class="i-name">feather-repeat</span><span class="i-code">0xe8b4</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b5"><i class="demo-icon feather-rewind">&#xe8b5;</i> <span class="i-name">feather-rewind</span><span class="i-code">0xe8b5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b6"><i class="demo-icon feather-rotate-ccw">&#xe8b6;</i> <span class="i-name">feather-rotate-ccw</span><span class="i-code">0xe8b6</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8b7"><i class="demo-icon feather-rotate-cw">&#xe8b7;</i> <span class="i-name">feather-rotate-cw</span><span class="i-code">0xe8b7</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b8"><i class="demo-icon feather-rss">&#xe8b8;</i> <span class="i-name">feather-rss</span><span class="i-code">0xe8b8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b9"><i class="demo-icon feather-save">&#xe8b9;</i> <span class="i-name">feather-save</span><span class="i-code">0xe8b9</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ba"><i class="demo-icon feather-scissors">&#xe8ba;</i> <span class="i-name">feather-scissors</span><span class="i-code">0xe8ba</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8bb"><i class="demo-icon feather-search">&#xe8bb;</i> <span class="i-name">feather-search</span><span class="i-code">0xe8bb</span></div>
+        <div class="the-icons span3" title="Code: 0xe8bc"><i class="demo-icon feather-send">&#xe8bc;</i> <span class="i-name">feather-send</span><span class="i-code">0xe8bc</span></div>
+        <div class="the-icons span3" title="Code: 0xe8bd"><i class="demo-icon feather-server">&#xe8bd;</i> <span class="i-name">feather-server</span><span class="i-code">0xe8bd</span></div>
+        <div class="the-icons span3" title="Code: 0xe8be"><i class="demo-icon feather-settings">&#xe8be;</i> <span class="i-name">feather-settings</span><span class="i-code">0xe8be</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8bf"><i class="demo-icon feather-share">&#xe8bf;</i> <span class="i-name">feather-share</span><span class="i-code">0xe8bf</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c0"><i class="demo-icon feather-share-2">&#xe8c0;</i> <span class="i-name">feather-share-2</span><span class="i-code">0xe8c0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c1"><i class="demo-icon feather-shield">&#xe8c1;</i> <span class="i-name">feather-shield</span><span class="i-code">0xe8c1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c2"><i class="demo-icon feather-shield-off">&#xe8c2;</i> <span class="i-name">feather-shield-off</span><span class="i-code">0xe8c2</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8c3"><i class="demo-icon feather-shopping-bag">&#xe8c3;</i> <span class="i-name">feather-shopping-bag</span><span class="i-code">0xe8c3</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c4"><i class="demo-icon feather-shopping-cart">&#xe8c4;</i> <span class="i-name">feather-shopping-cart</span><span class="i-code">0xe8c4</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c5"><i class="demo-icon feather-shuffle">&#xe8c5;</i> <span class="i-name">feather-shuffle</span><span class="i-code">0xe8c5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c6"><i class="demo-icon feather-sidebar">&#xe8c6;</i> <span class="i-name">feather-sidebar</span><span class="i-code">0xe8c6</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8c7"><i class="demo-icon feather-skip-back">&#xe8c7;</i> <span class="i-name">feather-skip-back</span><span class="i-code">0xe8c7</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c8"><i class="demo-icon feather-skip-forward">&#xe8c8;</i> <span class="i-name">feather-skip-forward</span><span class="i-code">0xe8c8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c9"><i class="demo-icon feather-slack">&#xe8c9;</i> <span class="i-name">feather-slack</span><span class="i-code">0xe8c9</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ca"><i class="demo-icon feather-sliders">&#xe8ca;</i> <span class="i-name">feather-sliders</span><span class="i-code">0xe8ca</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8cb"><i class="demo-icon feather-smartphone">&#xe8cb;</i> <span class="i-name">feather-smartphone</span><span class="i-code">0xe8cb</span></div>
+        <div class="the-icons span3" title="Code: 0xe8cc"><i class="demo-icon feather-slash">&#xe8cc;</i> <span class="i-name">feather-slash</span><span class="i-code">0xe8cc</span></div>
+        <div class="the-icons span3" title="Code: 0xe8cd"><i class="demo-icon feather-speaker">&#xe8cd;</i> <span class="i-name">feather-speaker</span><span class="i-code">0xe8cd</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ce"><i class="demo-icon feather-smile">&#xe8ce;</i> <span class="i-name">feather-smile</span><span class="i-code">0xe8ce</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8cf"><i class="demo-icon feather-square">&#xe8cf;</i> <span class="i-name">feather-square</span><span class="i-code">0xe8cf</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d0"><i class="demo-icon feather-star">&#xe8d0;</i> <span class="i-name">feather-star</span><span class="i-code">0xe8d0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d1"><i class="demo-icon feather-stop-circle">&#xe8d1;</i> <span class="i-name">feather-stop-circle</span><span class="i-code">0xe8d1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d2"><i class="demo-icon feather-sun">&#xe8d2;</i> <span class="i-name">feather-sun</span><span class="i-code">0xe8d2</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8d3"><i class="demo-icon feather-sunrise">&#xe8d3;</i> <span class="i-name">feather-sunrise</span><span class="i-code">0xe8d3</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d4"><i class="demo-icon feather-sunset">&#xe8d4;</i> <span class="i-name">feather-sunset</span><span class="i-code">0xe8d4</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d5"><i class="demo-icon feather-tablet">&#xe8d5;</i> <span class="i-name">feather-tablet</span><span class="i-code">0xe8d5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d6"><i class="demo-icon feather-tag">&#xe8d6;</i> <span class="i-name">feather-tag</span><span class="i-code">0xe8d6</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8d7"><i class="demo-icon feather-target">&#xe8d7;</i> <span class="i-name">feather-target</span><span class="i-code">0xe8d7</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d8"><i class="demo-icon feather-terminal">&#xe8d8;</i> <span class="i-name">feather-terminal</span><span class="i-code">0xe8d8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d9"><i class="demo-icon feather-tool">&#xe8d9;</i> <span class="i-name">feather-tool</span><span class="i-code">0xe8d9</span></div>
+        <div class="the-icons span3" title="Code: 0xe8da"><i class="demo-icon feather-thermometer">&#xe8da;</i> <span class="i-name">feather-thermometer</span><span class="i-code">0xe8da</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8db"><i class="demo-icon feather-thumbs-up">&#xe8db;</i> <span class="i-name">feather-thumbs-up</span><span class="i-code">0xe8db</span></div>
+        <div class="the-icons span3" title="Code: 0xe8dc"><i class="demo-icon feather-toggle-left">&#xe8dc;</i> <span class="i-name">feather-toggle-left</span><span class="i-code">0xe8dc</span></div>
+        <div class="the-icons span3" title="Code: 0xe8dd"><i class="demo-icon feather-toggle-right">&#xe8dd;</i> <span class="i-name">feather-toggle-right</span><span class="i-code">0xe8dd</span></div>
+        <div class="the-icons span3" title="Code: 0xe8de"><i class="demo-icon feather-trello">&#xe8de;</i> <span class="i-name">feather-trello</span><span class="i-code">0xe8de</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8df"><i class="demo-icon feather-trash">&#xe8df;</i> <span class="i-name">feather-trash</span><span class="i-code">0xe8df</span></div>
+        <div class="the-icons span3" title="Code: 0xe8e0"><i class="demo-icon feather-thumbs-down">&#xe8e0;</i> <span class="i-name">feather-thumbs-down</span><span class="i-code">0xe8e0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8e1"><i class="demo-icon feather-trash-2">&#xe8e1;</i> <span class="i-name">feather-trash-2</span><span class="i-code">0xe8e1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8e2"><i class="demo-icon feather-trending-down">&#xe8e2;</i> <span class="i-name">feather-trending-down</span><span class="i-code">0xe8e2</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8e3"><i class="demo-icon feather-trending-up">&#xe8e3;</i> <span class="i-name">feather-trending-up</span><span class="i-code">0xe8e3</span></div>
+        <div class="the-icons span3" title="Code: 0xe8e4"><i class="demo-icon feather-triangle">&#xe8e4;</i> <span class="i-name">feather-triangle</span><span class="i-code">0xe8e4</span></div>
+        <div class="the-icons span3" title="Code: 0xe8e5"><i class="demo-icon feather-truck">&#xe8e5;</i> <span class="i-name">feather-truck</span><span class="i-code">0xe8e5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8e6"><i class="demo-icon feather-tv">&#xe8e6;</i> <span class="i-name">feather-tv</span><span class="i-code">0xe8e6</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8e7"><i class="demo-icon feather-twitch">&#xe8e7;</i> <span class="i-name">feather-twitch</span><span class="i-code">0xe8e7</span></div>
+        <div class="the-icons span3" title="Code: 0xe8e8"><i class="demo-icon feather-twitter">&#xe8e8;</i> <span class="i-name">feather-twitter</span><span class="i-code">0xe8e8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8e9"><i class="demo-icon feather-type">&#xe8e9;</i> <span class="i-name">feather-type</span><span class="i-code">0xe8e9</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ea"><i class="demo-icon feather-umbrella">&#xe8ea;</i> <span class="i-name">feather-umbrella</span><span class="i-code">0xe8ea</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8eb"><i class="demo-icon feather-underline">&#xe8eb;</i> <span class="i-name">feather-underline</span><span class="i-code">0xe8eb</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ec"><i class="demo-icon feather-unlock">&#xe8ec;</i> <span class="i-name">feather-unlock</span><span class="i-code">0xe8ec</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ed"><i class="demo-icon feather-upload">&#xe8ed;</i> <span class="i-name">feather-upload</span><span class="i-code">0xe8ed</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ee"><i class="demo-icon feather-upload-cloud">&#xe8ee;</i> <span class="i-name">feather-upload-cloud</span><span class="i-code">0xe8ee</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8ef"><i class="demo-icon feather-user">&#xe8ef;</i> <span class="i-name">feather-user</span><span class="i-code">0xe8ef</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f0"><i class="demo-icon feather-user-check">&#xe8f0;</i> <span class="i-name">feather-user-check</span><span class="i-code">0xe8f0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f1"><i class="demo-icon feather-user-minus">&#xe8f1;</i> <span class="i-name">feather-user-minus</span><span class="i-code">0xe8f1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f2"><i class="demo-icon feather-users">&#xe8f2;</i> <span class="i-name">feather-users</span><span class="i-code">0xe8f2</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8f3"><i class="demo-icon feather-user-plus">&#xe8f3;</i> <span class="i-name">feather-user-plus</span><span class="i-code">0xe8f3</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f4"><i class="demo-icon feather-video-off">&#xe8f4;</i> <span class="i-name">feather-video-off</span><span class="i-code">0xe8f4</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f5"><i class="demo-icon feather-video">&#xe8f5;</i> <span class="i-name">feather-video</span><span class="i-code">0xe8f5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f6"><i class="demo-icon feather-user-x">&#xe8f6;</i> <span class="i-name">feather-user-x</span><span class="i-code">0xe8f6</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8f7"><i class="demo-icon feather-voicemail">&#xe8f7;</i> <span class="i-name">feather-voicemail</span><span class="i-code">0xe8f7</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f8"><i class="demo-icon feather-volume">&#xe8f8;</i> <span class="i-name">feather-volume</span><span class="i-code">0xe8f8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f9"><i class="demo-icon feather-volume-1">&#xe8f9;</i> <span class="i-name">feather-volume-1</span><span class="i-code">0xe8f9</span></div>
+        <div class="the-icons span3" title="Code: 0xe8fa"><i class="demo-icon feather-volume-2">&#xe8fa;</i> <span class="i-name">feather-volume-2</span><span class="i-code">0xe8fa</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8fb"><i class="demo-icon feather-volume-x">&#xe8fb;</i> <span class="i-name">feather-volume-x</span><span class="i-code">0xe8fb</span></div>
+        <div class="the-icons span3" title="Code: 0xe8fc"><i class="demo-icon feather-wifi">&#xe8fc;</i> <span class="i-name">feather-wifi</span><span class="i-code">0xe8fc</span></div>
+        <div class="the-icons span3" title="Code: 0xe8fd"><i class="demo-icon feather-wifi-off">&#xe8fd;</i> <span class="i-name">feather-wifi-off</span><span class="i-code">0xe8fd</span></div>
+        <div class="the-icons span3" title="Code: 0xe8fe"><i class="demo-icon feather-watch">&#xe8fe;</i> <span class="i-name">feather-watch</span><span class="i-code">0xe8fe</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8ff"><i class="demo-icon feather-wind">&#xe8ff;</i> <span class="i-name">feather-wind</span><span class="i-code">0xe8ff</span></div>
+        <div class="the-icons span3" title="Code: 0xe900"><i class="demo-icon feather-x-circle">&#xe900;</i> <span class="i-name">feather-x-circle</span><span class="i-code">0xe900</span></div>
+        <div class="the-icons span3" title="Code: 0xe901"><i class="demo-icon feather-x-octagon">&#xe901;</i> <span class="i-name">feather-x-octagon</span><span class="i-code">0xe901</span></div>
+        <div class="the-icons span3" title="Code: 0xe902"><i class="demo-icon feather-x-square">&#xe902;</i> <span class="i-name">feather-x-square</span><span class="i-code">0xe902</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe903"><i class="demo-icon feather-x">&#xe903;</i> <span class="i-name">feather-x</span><span class="i-code">0xe903</span></div>
+        <div class="the-icons span3" title="Code: 0xe904"><i class="demo-icon feather-youtube">&#xe904;</i> <span class="i-name">feather-youtube</span><span class="i-code">0xe904</span></div>
+        <div class="the-icons span3" title="Code: 0xe905"><i class="demo-icon feather-zap">&#xe905;</i> <span class="i-name">feather-zap</span><span class="i-code">0xe905</span></div>
+        <div class="the-icons span3" title="Code: 0xe906"><i class="demo-icon feather-zap-off">&#xe906;</i> <span class="i-name">feather-zap-off</span><span class="i-code">0xe906</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe907"><i class="demo-icon feather-zoom-in">&#xe907;</i> <span class="i-name">feather-zoom-in</span><span class="i-code">0xe907</span></div>
+        <div class="the-icons span3" title="Code: 0xe908"><i class="demo-icon feather-zoom-out">&#xe908;</i> <span class="i-name">feather-zoom-out</span><span class="i-code">0xe908</span></div>
+        <div class="the-icons span3" title="Code: 0xe909"><i class="demo-icon feather-airplay">&#xe909;</i> <span class="i-name">feather-airplay</span><span class="i-code">0xe909</span></div>
+        <div class="the-icons span3" title="Code: 0xe90a"><i class="demo-icon feather-activity">&#xe90a;</i> <span class="i-name">feather-activity</span><span class="i-code">0xe90a</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe90b"><i class="demo-icon feather-alert-circle">&#xe90b;</i> <span class="i-name">feather-alert-circle</span><span class="i-code">0xe90b</span></div>
+        <div class="the-icons span3" title="Code: 0xe90c"><i class="demo-icon feather-alert-octagon">&#xe90c;</i> <span class="i-name">feather-alert-octagon</span><span class="i-code">0xe90c</span></div>
+        <div class="the-icons span3" title="Code: 0xe90d"><i class="demo-icon feather-alert-triangle">&#xe90d;</i> <span class="i-name">feather-alert-triangle</span><span class="i-code">0xe90d</span></div>
+        <div class="the-icons span3" title="Code: 0xe90e"><i class="demo-icon feather-align-center">&#xe90e;</i> <span class="i-name">feather-align-center</span><span class="i-code">0xe90e</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe90f"><i class="demo-icon feather-align-justify">&#xe90f;</i> <span class="i-name">feather-align-justify</span><span class="i-code">0xe90f</span></div>
+        <div class="the-icons span3" title="Code: 0xe910"><i class="demo-icon feather-align-right">&#xe910;</i> <span class="i-name">feather-align-right</span><span class="i-code">0xe910</span></div>
+        <div class="the-icons span3" title="Code: 0xe911"><i class="demo-icon feather-archive">&#xe911;</i> <span class="i-name">feather-archive</span><span class="i-code">0xe911</span></div>
+        <div class="the-icons span3" title="Code: 0xe912"><i class="demo-icon feather-anchor">&#xe912;</i> <span class="i-name">feather-anchor</span><span class="i-code">0xe912</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe913"><i class="demo-icon feather-align-left">&#xe913;</i> <span class="i-name">feather-align-left</span><span class="i-code">0xe913</span></div>
+        <div class="the-icons span3" title="Code: 0xe914"><i class="demo-icon feather-arrow-down">&#xe914;</i> <span class="i-name">feather-arrow-down</span><span class="i-code">0xe914</span></div>
+        <div class="the-icons span3" title="Code: 0xe915"><i class="demo-icon feather-aperture">&#xe915;</i> <span class="i-name">feather-aperture</span><span class="i-code">0xe915</span></div>
+        <div class="the-icons span3" title="Code: 0xe916"><i class="demo-icon feather-arrow-down-circle">&#xe916;</i> <span class="i-name">feather-arrow-down-circle</span><span class="i-code">0xe916</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe917"><i class="demo-icon feather-arrow-down-right">&#xe917;</i> <span class="i-name">feather-arrow-down-right</span><span class="i-code">0xe917</span></div>
+        <div class="the-icons span3" title="Code: 0xe918"><i class="demo-icon feather-arrow-down-left">&#xe918;</i> <span class="i-name">feather-arrow-down-left</span><span class="i-code">0xe918</span></div>
+        <div class="the-icons span3" title="Code: 0xe919"><i class="demo-icon feather-arrow-left">&#xe919;</i> <span class="i-name">feather-arrow-left</span><span class="i-code">0xe919</span></div>
+        <div class="the-icons span3" title="Code: 0xe91a"><i class="demo-icon feather-cloud-drizzle">&#xe91a;</i> <span class="i-name">feather-cloud-drizzle</span><span class="i-code">0xe91a</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe91b"><i class="demo-icon feather-cloud-rain">&#xe91b;</i> <span class="i-name">feather-cloud-rain</span><span class="i-code">0xe91b</span></div>
+        <div class="the-icons span3" title="Code: 0xe91c"><i class="demo-icon feather-cloud-snow">&#xe91c;</i> <span class="i-name">feather-cloud-snow</span><span class="i-code">0xe91c</span></div>
+      </div>
+    </div>
+    <div class="container footer">Generated by <a href="http://fontello.com">fontello.com</a></div>
+  </body>
+</html>
